@@ -1,20 +1,20 @@
 "use client";
 import { useState } from "react";
-import { Container, SearchButton, SearchInput } from "@/app/search/styles";
+import { Container, SearchButton, SearchInput } from "@/app/results/styles";
 import { Title } from "@/styles/home-page-styles";
-import { useSearch } from "@/hooks/useSearch";
+import { useFetchList } from "@/hooks/useFetchList";
 
-const Search = () => {
+const Results = () => {
   const [searchQuery, setSearchQuery] = useState("");
-  const { data, loading, error } = useSearch(searchQuery);
+  const { list, isLoading, isError } = useFetchList(searchQuery);
 
   const handleSearch = () => {
     alert(`Searching for: ${searchQuery}`);
   };
+  console.log(list?.info);
 
   return (
     <Container>
-      <Title>Search Page</Title>
       <div>
         <SearchInput
           type="text"
@@ -24,8 +24,12 @@ const Search = () => {
         />
         <SearchButton onClick={handleSearch}>Search</SearchButton>
       </div>
+      <Title>Character list</Title>
+      <div>
+        {list?.results.map((char) => <div key={char.id}>{char.name}</div>)}
+      </div>
     </Container>
   );
 };
 
-export default Search;
+export default Results;

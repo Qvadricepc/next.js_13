@@ -7,8 +7,8 @@ export default function Home() {
   return (
     <Body>
       <Wrapper>
-        <Title>Github repository search</Title>
-        <Button onClick={() => router.push("/search")}>Start</Button>
+        <Title>Rick and Morty Characters</Title>
+        <Button onClick={() => router.push("/results")}>Start</Button>
       </Wrapper>
     </Body>
   );

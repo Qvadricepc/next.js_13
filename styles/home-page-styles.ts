@@ -43,7 +43,7 @@ export const Title = styled.h1`
   font-size: 32px;
   color: #333;
   text-align: center;
-  margin-bottom: 20px;
+  margin-top: 20px;
   text-transform: uppercase;
   letter-spacing: 2px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);

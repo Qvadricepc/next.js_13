@@ -1,6 +1,7 @@
 import React from "react";
-import { Container } from "@/components/styles";
+import { Container } from "@/components/card/styles";
 import Link from "next/link";
+import Image from "next/image";
 
 interface ICard {
   name: string;

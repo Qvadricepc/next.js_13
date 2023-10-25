@@ -13,6 +13,10 @@ export const useFetchList = (query?: string, page?: number) => {
     setIsLoading(true);
     try {
       const response = await fetch(apiUrl);
+
+      if (!response.ok) {
+        throw new Error(`API request failed with status: ${response.status}`);
+      }
       const responseJSON = await response.json();
       setList(responseJSON);
       setIsLoading(false);
@@ -23,8 +27,8 @@ export const useFetchList = (query?: string, page?: number) => {
   };
 
   useEffect(() => {
-    void fetchList(query);
-  }, [query]);
+    void fetchList(query, page);
+  }, [query, page]);
 
   return { list, isError, isLoading };
 };

@@ -6,11 +6,13 @@ import React, { Dispatch, SetStateAction } from "react";
 interface ISearch {
   searchQuery: string;
   setSearchQuery: Dispatch<SetStateAction<string>>;
+  setError: Dispatch<SetStateAction<string>>;
 }
 
 export const SearchInput: React.FC<ISearch> = ({
   searchQuery,
   setSearchQuery,
+  setError,
 }) => {
   return (
     <Container>
@@ -18,7 +20,10 @@ export const SearchInput: React.FC<ISearch> = ({
         type="text"
         placeholder="Enter character name"
         value={searchQuery}
-        onChange={(e) => setSearchQuery(e.target.value)}
+        onChange={(e) => {
+          setSearchQuery(e.target.value);
+          setError("");
+        }}
       />
       <IconContainer>
         <FontAwesomeIcon icon={faSearch} />

@@ -30,5 +30,5 @@ export const useFetchList = (query?: string, page?: number) => {
     void fetchList(query, page);
   }, [query, page]);
 
-  return { list, isError, isLoading };
+  return { list, isError, isLoading, setIsError };
 };

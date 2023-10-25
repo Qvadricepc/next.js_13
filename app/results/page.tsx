@@ -11,11 +11,18 @@ import Pagination from "@/components/pagination";
 const Results = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [page, setPage] = useState(1);
-  const { list, isLoading, isError } = useFetchList(searchQuery, page);
+  const { list, isLoading, isError, setIsError } = useFetchList(
+    searchQuery,
+    page,
+  );
 
   return (
     <Container>
-      <SearchInput searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+      <SearchInput
+        searchQuery={searchQuery}
+        setSearchQuery={setSearchQuery}
+        setError={setIsError}
+      />
       <Title>Character list</Title>
       <InfoWrapper>
         <p>count: {list?.info.count}</p>

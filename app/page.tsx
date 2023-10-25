@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <Body>
       <Wrapper>
-        <Title>Rick and Morty Characters</Title>
+        <Title>Rick and Morty API</Title>
         <Button onClick={() => router.push("/results")}>Start</Button>
       </Wrapper>
     </Body>

@@ -31,3 +31,12 @@ export const SearchButton = styled.button`
   font-size: 16px;
   cursor: pointer;
 `;
+
+export const CardsWrapper = styled.div`
+  display: flex;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+`;

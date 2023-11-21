@@ -10,7 +10,7 @@ import {
   CharacterName,
   CharacterStatus,
   ImageContainer,
-} from "@/components/card/styles";
+} from "./styles";
 import CircularProgress from "@/components/circular-progress";
 import { useRouter } from "next/navigation";
 import Image from "next/image";

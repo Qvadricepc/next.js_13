@@ -9,6 +9,7 @@ import {
   CharacterInfo,
   CharacterName,
   CharacterStatus,
+  ImageContainer,
 } from "@/components/card/styles";
 import CircularProgress from "@/components/circular-progress";
 import { useRouter } from "next/navigation";
@@ -35,7 +36,15 @@ const Character = ({ params }: { params: { characterId: string } }) => {
           <CircularProgress />
         ) : (
           <>
-            <Image src={image} alt={name} width={500} height={500} />
+            <ImageContainer>
+              <Image
+                src={image}
+                alt={name}
+                width={500}
+                height={500}
+                layout="responsive"
+              />
+            </ImageContainer>
             <CharacterInfo>
               <CharacterName>{name}</CharacterName>
               <CharacterStatus status={status}>{status}</CharacterStatus>
@@ -43,10 +52,13 @@ const Character = ({ params }: { params: { characterId: string } }) => {
                 <CharacterDetailItem>Species: {species}</CharacterDetailItem>
                 <CharacterDetailItem>Gender: {gender}</CharacterDetailItem>
                 <CharacterDetailItem>Origin: {origin.name}</CharacterDetailItem>
-                <CharacterDetailItem>Episode: {episode}</CharacterDetailItem>
                 <CharacterDetailItem>
                   Location: {location.name}
                 </CharacterDetailItem>
+                <CharacterDetailItem>Episodes:</CharacterDetailItem>
+                {episode.map((every) => (
+                  <CharacterDetailItem key={every}>{every}</CharacterDetailItem>
+                ))}
               </CharacterDetails>
             </CharacterInfo>
           </>

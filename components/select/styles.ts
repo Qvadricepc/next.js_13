@@ -16,4 +16,8 @@ export const StyledSelect = styled.select`
     outline: none;
     border-color: #555;
   }
+
+  @media (max-width: 768px) {
+    width: 150px;
+  }
 `;

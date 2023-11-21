@@ -71,11 +71,13 @@ const Results = () => {
           ))
         )}
       </CardsWrapper>
-      <Pagination
-        currentPage={page}
-        onPageChange={setPage}
-        totalPages={list?.info.pages}
-      />
+      {!isError && (
+        <Pagination
+          currentPage={page}
+          onPageChange={setPage}
+          totalPages={list?.info.pages}
+        />
+      )}
     </Container>
   );
 };

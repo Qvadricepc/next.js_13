@@ -5,6 +5,7 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 100%;
 
   &:hover {
     background-color: #f0f0f0;
@@ -51,7 +52,18 @@ export const BackButton = styled.button`
   border-radius: 5px;
   cursor: pointer;
   align-self: start;
+  margin-bottom: 5px;
   &:hover {
     background-color: #e9e9e9;
+  }
+`;
+
+export const ImageContainer = styled.div`
+  width: 500px;
+  height: 500px;
+
+  @media (max-width: 768px) {
+    width: 300px;
+    height: 300px;
   }
 `;

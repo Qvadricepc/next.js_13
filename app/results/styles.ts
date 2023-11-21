@@ -16,7 +16,7 @@ export const CardsWrapper = styled.div`
   justify-content: center;
   align-items: center;
   gap: 20px;
-  min-height: 70vh;
+  min-height: 73vh;
 `;
 
 export const InfoWrapper = styled.div`

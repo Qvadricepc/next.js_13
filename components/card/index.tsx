@@ -15,7 +15,7 @@ export const Card: React.FC<ICard> = ({ name, image, gender, status, id }) => {
   return (
     <Link href={`/${id}`} style={{ textDecoration: "none", color: "inherit" }}>
       <Container>
-        <img src={image} alt="character" />
+        <Image src={image} alt="character" height={175} width={175} />
         <p>{name}</p>
         <p>{gender}</p>
         <p>{status}</p>

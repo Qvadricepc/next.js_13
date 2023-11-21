@@ -16,10 +16,19 @@ export const CardsWrapper = styled.div`
   justify-content: center;
   align-items: center;
   gap: 20px;
-  min-height: 100vh;
+  min-height: 70vh;
 `;
 
 export const InfoWrapper = styled.div`
   display: flex;
   gap: 40px;
+`;
+
+export const HeaderWrapper = styled.div`
+  display: flex;
+  gap: 10px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;

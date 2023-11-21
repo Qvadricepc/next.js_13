@@ -1,5 +1,6 @@
 ## Getting Started
 
+The project uses: https://rickandmortyapi.com/documentation
 First, run the development server:
 
 ```bash
@@ -11,3 +12,4 @@ pnpm dev
 # or
 bun dev
 ```
+

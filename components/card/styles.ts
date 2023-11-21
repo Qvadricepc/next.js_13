@@ -8,7 +8,7 @@ export const Container = styled.div`
 
   &:hover {
     background-color: #f0f0f0;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     transform: scale(1.05);
   }
 `;
@@ -18,11 +18,6 @@ export const CharacterContainer = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 20px;
-`;
-
-export const CharacterImage = styled.img`
-  max-width: 100%;
-  height: auto;
 `;
 
 export const CharacterInfo = styled.div`
@@ -47,4 +42,16 @@ export const CharacterDetails = styled.div`
 
 export const CharacterDetailItem = styled.div`
   margin-bottom: 5px;
+`;
+
+export const BackButton = styled.button`
+  padding: 10px 15px;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  align-self: start;
+  &:hover {
+    background-color: #e9e9e9;
+  }
 `;
